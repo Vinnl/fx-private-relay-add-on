@@ -22,8 +22,7 @@ them](https://www.facebook.com/business/help/606443329504150?helpref=faq_content
 1. Clone, change to the directory, install dependencies:
 
     ```
-    git clone git@github.com:groovecoder/private-relay.git
-    cd private-relay/extension
+    git clone git@github.com:mozilla/fx-private-relay-add-on.git
     npm install
     ```
 
@@ -31,7 +30,13 @@ them](https://www.facebook.com/business/help/606443329504150?helpref=faq_content
    [`web-ext`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext):
 
     ```
-    web-ext run
+    web-ext run -s src/
+    ```
+    
+    or via npm:
+
+    ```
+    npm run dev
     ```
 
 3. Visit http://127.0.0.1:8000
