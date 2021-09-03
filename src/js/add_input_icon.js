@@ -255,6 +255,7 @@ async function addRelayIconToInput(emailInput) {
     //Show get unlimited aliases btn
     if (!premium) {
       if (maxNumAliasesReached) {
+        remainingAliasesSpan.classList.add("max-num-aliases");
         generateAliasBtn.remove();
         sendInPageEvent("viewed-menu", "input-menu-max-aliases-message")
       }
@@ -263,6 +264,11 @@ async function addRelayIconToInput(emailInput) {
         getUnlimitedAliasesBtn.remove();
       }
     }
+
+    else {
+      getUnlimitedAliasesBtn.remove();
+    }
+
 
     // Handle "Generate New Alias" clicks
     generateAliasBtn.addEventListener("click", async(generateClickEvt) => {
